@@ -1,6 +1,24 @@
 -- main.lua
+local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
 
-local currentVersion = "1.2"  -- Define the current version of your OS
+-- Function to get the latest version from GitHub
+local function getRemoteVersion()
+    local response = http.get(versionUrl)
+  
+    if response then
+        local version = response.readLine()
+    
+        response.close()
+    
+        return version
+    else
+        print("Failed to check for updates. Ensure HTTP is enabled.")
+    
+        return nil
+    end
+end
+
+local currentVersion = getRemoteVersion()
 
 -- Function to clear the terminal
 local function clearScreen()
@@ -11,7 +29,7 @@ end
 -- Function to display the main menu
 local function displayMenu()
     clearScreen()
-    print("Welcome to My Custom OS! Version: "..currentVersion)
+    print("Welcome to Mindows! Version: "..currentVersion)
     print("-------------------------")
     print("1. View Files")
     print("2. Edit a File")
