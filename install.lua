@@ -30,6 +30,9 @@ end
 
 -- Start Installation
 print("Starting installation from GitHub...")
+
+os.sleep(1)
+
 for _, file in ipairs(files) do
     print("Downloading " .. file.path .. "...")
     downloadFile(file.url, file.path)
@@ -41,4 +44,7 @@ startup.writeLine("shell.run('os/startup.lua')")
 startup.close()
 
 print("Installation complete! Rebooting...")
+
+os.sleep(1)
+
 os.reboot()
