@@ -1,4 +1,7 @@
 -- startup.lua
+term.clear()
+term.setCursorPos(1, 1)
+
 print("Running Updater...")
 
 local success, err = pcall(function()
