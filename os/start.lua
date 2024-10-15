@@ -1,6 +1,7 @@
 -- start.lua
 term.clear()
 term.setCursorPos(1, 1)
+
 print("Welcome to Mindows!")
 print("1. Start OS")
 print("2. Shell Mode")
