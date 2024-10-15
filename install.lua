@@ -61,10 +61,10 @@ local response = http.get(url)
 
 if response then
     local content = response.readAll()
-
-    currentVersion = content
     
     response.close()
+
+    currentVersion = content
 else
     print("Failed to fetch version.txt from GitHub. Make sure HTTP is enabled.")
 end
