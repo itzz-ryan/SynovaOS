@@ -30,6 +30,8 @@ end
 
 -- Start Installation
 print("Starting installation from GitHub...")
+print("")
+print("====================================")
 
 os.sleep(1)
 
@@ -43,6 +45,8 @@ local startup = fs.open("startup", "w")
 startup.writeLine("shell.run('os/startup.lua')")
 startup.close()
 
+print("====================================")
+print("")
 print("Installation complete! Rebooting...")
 
 os.sleep(1)
