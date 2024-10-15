@@ -1,5 +1,5 @@
 -- updater.lua
-local currentVersion = "1.0"  -- Set this to the current version of your OS
+local currentVersion = "1.1"  -- Set this to the current version of your OS
 local versionFileUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
 local baseUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/"
 local filesToUpdate = {
