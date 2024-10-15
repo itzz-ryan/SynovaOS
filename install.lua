@@ -1,5 +1,6 @@
 -- install.lua
 term.clear()
+term.setCursorPos(1, 1)
 
 -- List of directories needed
 local directories = {
