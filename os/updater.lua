@@ -3,7 +3,8 @@ local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft
 local mainPath = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/"
 local filesToUpdate = {
     {url = mainPath.."start.lua", path = "os/start.lua"},
-    {url = mainPath.."main.lua", path = "os/main.lua"}
+    {url = mainPath.."main.lua", path = "os/main.lua"},
+    {url = mainPath.."games/snake.lua", path = "os/games/snake.lua"}
 }
 
 -- Function to read the local version file
