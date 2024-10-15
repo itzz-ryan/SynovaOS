@@ -15,7 +15,7 @@ end
 -- Define files with their GitHub raw URLs and target paths
 local files = {
     {url = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/startup.lua", path = "os/startup.lua"},
-    {url = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/updater.lua", path = "os/updater.lua"},
+    {url = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/main.lua", path = "os/main.lua"},
     {url = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/commands/view.lua", path = "os/commands/view.lua"},
     {url = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/commands/edit.lua", path = "os/commands/edit.lua"},
     {url = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/libs/helper.lua", path = "os/libs/helper.lua"}
