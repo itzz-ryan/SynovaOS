@@ -1,7 +1,7 @@
 -- start.lua
 term.clear()
 term.setCursorPos(1, 1)
-print("Welcome to My Custom OS")
+print("Welcome to Mindows!")
 print("1. Start OS")
 print("2. Shell Mode")
 print("3. Shutdown")
