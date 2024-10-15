@@ -162,6 +162,8 @@ while true do
     elseif choice == "7" then
         print("Shutting down...")
         os.shutdown()
+    elseif choice == "8" then
+        
     else
         print("Invalid choice! Please select again. Press Enter to continue...")
         read()  -- Wait for user input
