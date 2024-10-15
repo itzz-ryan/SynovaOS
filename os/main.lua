@@ -163,7 +163,7 @@ while true do
         print("Shutting down...")
         os.shutdown()
     elseif choice == "8" then
-        
+        shell.run("os/games/snake.lua")
     else
         print("Invalid choice! Please select again. Press Enter to continue...")
         read()  -- Wait for user input
