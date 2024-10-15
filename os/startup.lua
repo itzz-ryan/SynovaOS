@@ -1,5 +1,5 @@
 -- startup.lua
-shell.run("os/updater.lua")
+shell.run("updater.lua")
 
 term.clear()
 term.setCursorPos(1, 1)
