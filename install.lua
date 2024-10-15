@@ -6,6 +6,7 @@ term.setCursorPos(1, 1)
 local directories = {
     "os",
     "os/commands",
+    "os/games",
     "os/libs"
 }
 
