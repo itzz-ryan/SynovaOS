@@ -12,14 +12,14 @@ if not success then
     print("Error running updater: " .. err)
 end
 
-os.sleep(1)
+os.sleep(5)
 
 term.clear()
 term.setCursorPos(1, 1)
 
-print("Starting OS...")
+print("Starting Mindows...")
 
-os.sleep(3)
+os.sleep(1)
 
 local success, err = pcall(function()
     shell.run("os/start.lua")
