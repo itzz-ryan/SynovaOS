@@ -16,15 +16,18 @@ end
 -- Function to check for updates
 local function checkForUpdates()
     print("Checking for updates...")
-    
-    -- Download the version file
-    local versionFile = "version.txt"
+
+    -- Download the version file to a temporary location
+    local versionFile = "temp_version.txt"
     downloadFile(versionFileUrl, versionFile)
 
     -- Read the version number from the downloaded file
     local file = fs.open(versionFile, "r")
     local latestVersion = file.readLine()
     file.close()
+
+    -- Remove the temporary version file
+    fs.delete(versionFile)
 
     print("Current version: " .. currentVersion)
     print("Latest version: " .. latestVersion)
