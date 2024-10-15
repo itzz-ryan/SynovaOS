@@ -38,8 +38,9 @@ local function displayMenu()
     print("5. Delete a File")
     print("6. Clear Screen")
     print("7. Shutdown")
+    print("8. Snake Game")
     print("-------------------------")
-    print("Select an option (1-7): ")
+    print("Select an option (1-8): ")
 end
 
 -- Function to view files in the current directory
