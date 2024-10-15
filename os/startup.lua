@@ -12,7 +12,7 @@ if not success then
     print("Error running updater: " .. err)
 end
 
-os.sleep(2)
+os.sleep(1.5)
 
 term.clear()
 term.setCursorPos(1, 1)
