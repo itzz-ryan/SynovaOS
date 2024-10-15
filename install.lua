@@ -53,13 +53,27 @@ startup.writeLine("shell.run('os/startup.lua')")
 startup.close()
 
 -- Setup currentVersion file
-local file = fs.open(fileName, "w")
-if file then
-    file.write(content)
+local currentVersion
+
+local url = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
+
+local response = http.get(url)
+
+if response then
+    local content = response.readAll()
+
+    currentVersion = content
     
-    -- Close the file to save it
-    file.close()
-    print("File '" .. fileName .. "' created and content written!")
+    response.close()
+else
+    print("Failed to fetch version.txt from GitHub. Make sure HTTP is enabled.")
+end
+
+local currentVersionFile = fs.open("currentVersion.txt", "w")
+if currentVersionFile then
+    currentVersionFile.write(currentVersion)
+    
+    currentVersionFile.close()
 else
     print("Failed to open the file for writing.")
 end
