@@ -52,6 +52,19 @@ local startup = fs.open("startup", "w")
 startup.writeLine("shell.run('os/startup.lua')")
 startup.close()
 
+-- Setup currentVersion file
+local file = fs.open(fileName, "w")
+if file then
+    file.write(content)
+    
+    -- Close the file to save it
+    file.close()
+    print("File '" .. fileName .. "' created and content written!")
+else
+    print("Failed to open the file for writing.")
+end
+
+
 print("===================================")
 print("")
 print("Installation complete! Rebooting...")
