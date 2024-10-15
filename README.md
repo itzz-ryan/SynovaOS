@@ -1,6 +1,3 @@
-# ComputerCraft-OS
-An Operating-System for the Minecraft ComputerCraft Mod.
-
 # 🖥️ My Custom OS for ComputerCraft 🌟
 
 Welcome to **My Custom OS**! This is a lightweight and user-friendly operating system designed specifically for the **ComputerCraft** mod in **Minecraft**. With features like file management and command execution, it's the perfect way to enhance your ComputerCraft experience!
@@ -65,16 +62,3 @@ For any questions or feedback, reach out to me on GitHub: [GamerboyRyan](https:/
 ---
 
 Enjoy using **My Custom OS**! 🎉
-
-### Key Sections Explained
-
-- **Title and Description**: Introduces the project with emojis to grab attention.
-- **Features**: Highlights the main functionalities using icons for visual appeal.
-- **Installation Instructions**: Clear, numbered steps for ease of understanding.
-- **Usage**: Briefly outlines what users can do with the OS.
-- **Contributing**: Encourages community involvement with a friendly tone.
-- **License**: Clearly states the project's licensing.
-- **Acknowledgments**: Thanks the community and GitHub, adding a personal touch.
-- **Contact Information**: Provides a way for users to reach out for help or feedback.
-
-This format is engaging and well-suited for a GitHub repository. Feel free to tweak any part to better fit your style or add additional information specific to your project! If you need anything else, just let me know!
