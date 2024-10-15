@@ -1,4 +1,5 @@
-
+-- install.lua
+term.clear()
 
 -- List of directories needed
 local directories = {
