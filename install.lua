@@ -1,3 +1,5 @@
+
+
 -- List of directories needed
 local directories = {
     "os",
@@ -32,9 +34,9 @@ local function downloadFile(url, path)
 end
 
 -- Start Installation
-print("Starting installation from GitHub...")
+print("Starting installation...")
 print("")
-print("====================================")
+print("===================================")
 
 os.sleep(1)
 
@@ -48,7 +50,7 @@ local startup = fs.open("startup", "w")
 startup.writeLine("shell.run('os/startup.lua')")
 startup.close()
 
-print("====================================")
+print("===================================")
 print("")
 print("Installation complete! Rebooting...")
 
