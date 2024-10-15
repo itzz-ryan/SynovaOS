@@ -1,4 +1,6 @@
 -- startup.lua
+shell.run("os/updater.lua")
+
 term.clear()
 term.setCursorPos(1, 1)
 print("Welcome to My Custom OS")
