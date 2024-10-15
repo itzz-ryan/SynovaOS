@@ -1,6 +1,6 @@
 -- main.lua
 
-local currentVersion = "1.1"  -- Define the current version of your OS
+local currentVersion = "1.2"  -- Define the current version of your OS
 
 -- Function to clear the terminal
 local function clearScreen()
