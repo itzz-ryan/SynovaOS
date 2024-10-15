@@ -3,7 +3,6 @@ local currentVersion = "1.0"  -- Set this to the current version of your OS
 local versionFileUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
 local baseUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/"
 local filesToUpdate = {
-    "startup.lua",
     "commands/view.lua",
     "commands/edit.lua",
     "libs/helper.lua"
