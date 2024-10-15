@@ -19,7 +19,7 @@ term.setCursorPos(1, 1)
 
 print("Starting OS...")
 
-os.sleep(0.5)
+os.sleep(3)
 
 local success, err = pcall(function()
     shell.run("os/start.lua")
