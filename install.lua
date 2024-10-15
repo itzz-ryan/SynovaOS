@@ -28,6 +28,7 @@ local files = {
     {url = mainPath.."start.lua", path = "os/start.lua"},
     {url = mainPath.."view.lua", path = "os/commands/view.lua"},
     {url = mainPath.."commands/edit.lua", path = "os/commands/edit.lua"},
+    {url = mainPath.."games/snake.lua", path = "os/games/snake.lua"},
     {url = mainPath.."libs/helper.lua", path = "os/libs/helper.lua"}
 }
 
