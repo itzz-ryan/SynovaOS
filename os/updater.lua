@@ -41,6 +41,9 @@ local function checkForUpdates()
             print("Downloading " .. fileName .. "...")
             downloadFile(url, "os/" .. fileName)
         end
+
+        currentVersion = latestVersion
+        
         print("Update complete! Please reboot the computer.")
     else
         print("You are already using the latest version.")
