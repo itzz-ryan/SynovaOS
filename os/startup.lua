@@ -29,6 +29,8 @@ print("Starting Mindows...")
 
 os.sleep(2)
 
+local loadImg = paintutils.loadImage("loading")
+
 local success, err = pcall(function()
     shell.run("os/start.lua")
 end)
