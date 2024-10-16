@@ -46,10 +46,6 @@ end
 -- Display the loading image
 displayNFP("os/loading.nfp")
 
--- Optional: Keep the program running until a key is pressed
-print("Press any key to exit...")
-os.pullEvent("key")
-
 os.sleep(2)
 
 term.clear()
