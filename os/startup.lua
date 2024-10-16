@@ -2,6 +2,9 @@
 term.clear()
 term.setCursorPos(1, 1)
 
+if 
+shell.run("")
+
 print("Running Updater...")
 
 local success, err = pcall(function()
