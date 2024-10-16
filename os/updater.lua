@@ -62,9 +62,9 @@ local function checkForUpdates()
 
     local updaterFile = fs.open("update.lua", "w")
 
-    file.write(content)
+    updaterFile.write(content)
 
-    file.close()
+    updaterFile.close()
 
     -- Update version file last
     local file = fs.open("currentVersion.txt", "w")
