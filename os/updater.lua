@@ -56,7 +56,7 @@ local function checkForUpdates()
     -- Proceed with updating files
     print("Creating Updater file...")
 
-    shell.run("pastebin get update vX7AD0wu")
+    shell.run("pastebin get vX7AD0wu update")
 
     os.sleep(0.1)
 
