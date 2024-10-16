@@ -58,14 +58,13 @@ local function checkForUpdates()
 
     shell.run("pastebin get update vX7AD0wu")
 
-    -- Update version file last
-    local file = fs.open("currentVersion.txt", "w")
-  
-    file.write(remoteVersion)
-  
-    file.close()
+    os.sleep(0.1)
 
-    print("Update complete! System is now at version " .. remoteVersion)
+    print("Updating OS to version " .. remoteVersion .. "...")
+    
+    os.sleep(1)
+
+    shell.run("update")
 end
 
 -- Run the update check
