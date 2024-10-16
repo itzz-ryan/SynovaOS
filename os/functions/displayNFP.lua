@@ -1,4 +1,6 @@
-local function displayNFP(filePath)
+local displayNFPModule = {}
+
+function displayNFPModule.displayNFP(filePath)
     if fs.exists(filePath) then
         term.clear()
         term.setCursorPos(1, 1)
@@ -9,4 +11,4 @@ local function displayNFP(filePath)
     end
 end
 
-return displayNFP
+return displayNFPModule
