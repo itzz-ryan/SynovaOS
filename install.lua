@@ -7,7 +7,6 @@ local directories = {
     "os",
     "os/commands",
     "os/games",
-    "os/updater",
     "os/libs"
 }
 
@@ -23,8 +22,7 @@ local mainPath = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-O
 
 local files = {
     {url = mainPath.."monitor.lua", path = "os/monitor.lua"},
-    {url = mainPath.."updater/updater.lua", path = "os/updater/updater.lua"},
-    {url = mainPath.."updater/update.lua", path = "os/updater/update.lua"},
+    {url = mainPath.."updater/updater.lua", path = "os/updater.lua"},
     {url = mainPath.."main.lua", path = "os/main.lua"},
     {url = mainPath.."startup.lua", path = "os/startup.lua"},
     {url = mainPath.."start.lua", path = "os/start.lua"},
