@@ -1,9 +1,9 @@
 -- startup.lua
-if fs.exists("install.lua")
+if fs.exists("install.lua") then
     shell.run("delete install.lua")
 end
 
-if fs.exists("update.lua")
+if fs.exists("update.lua") then
     shell.run("delete update.lua")
 end
 
