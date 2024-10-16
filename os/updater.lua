@@ -1,11 +1,5 @@
 -- URLs for the GitHub version file and files to update
 local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
-local mainPath = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/"
-local filesToUpdate = {
-    {url = mainPath.."start.lua", path = "os/start.lua"},
-    {url = mainPath.."main.lua", path = "os/main.lua"},
-    {url = mainPath.."games/snake.lua", path = "os/games/snake.lua"}
-}
 
 -- Function to read the local version file
 local function getLocalVersion()
@@ -36,27 +30,6 @@ local function getRemoteVersion()
         print("Failed to check for updates. Ensure HTTP is enabled.")
     
         return nil
-    end
-end
-
--- Function to download and replace a file
-local function downloadFile(url, path)
-    local response = http.get(url)
-  
-    if response then
-        local content = response.readAll()
-    
-        response.close()
-
-        local file = fs.open(path, "w")
-    
-        file.write(content)
-    
-        file.close()
-    
-        print("Updated: " .. path)
-    else
-        print("Failed to download " .. path)
     end
 end
 
