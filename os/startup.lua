@@ -29,11 +29,9 @@ print("Starting Mindows...")
 
 os.sleep(2)
 
-shell.run("os/functions/displayNFP")
+local displayNFPModule = require("os/functions/displayNFP")
 
-local displayNFPModule = require("os/functions/displayNFP.lua")
-
-displayNFPModule.displayNFP("os/assets/loading.nfp")
+displayNFPModule.displayNFP("os/assets/loading")
 
 os.sleep(2)
 
