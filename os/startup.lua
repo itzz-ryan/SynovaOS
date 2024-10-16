@@ -1,9 +1,14 @@
 -- startup.lua
+if fs.exists("install.lua")
+    shell.run("delete install.lua")
+end
+
+if fs.exists("update.lua")
+    shell.run("delete update.lua")
+end
+
 term.clear()
 term.setCursorPos(1, 1)
-
-if 
-shell.run("")
 
 print("Running Updater...")
 
