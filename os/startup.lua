@@ -29,10 +29,31 @@ print("Starting Mindows...")
 
 os.sleep(2)
 
-local loadImage = paintutils.loadImage("loading")
-paintutils.drawImage(loadImage, 1, 1)
+-- Load the NFP file
+local function displayNFP(filename)
+    if fs.exists(filename) then
+        -- Clear the terminal
+        term.clear()
+        term.setCursorPos(1, 1)
+
+        -- Load and draw the NFP file
+        paintutils.drawImage(paintutils.loadImage(filename), 1, 1)
+    else
+        print("File not found: " .. filename)
+    end
+end
+
+-- Display the loading image
+displayNFP("os/loading.nfp")
+
+-- Optional: Keep the program running until a key is pressed
+print("Press any key to exit...")
+os.pullEvent("key")
 
 os.sleep(2)
+
+term.clear()
+term.setCursorPos(1, 1)
 
 local success, err = pcall(function()
     shell.run("os/start.lua")
