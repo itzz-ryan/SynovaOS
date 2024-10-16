@@ -23,7 +23,7 @@ end
 local mainPath = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/"
 
 local files = {
-    {url = mainPath.."assets/loading.nfp", path = "os/assets/loading.nfp"},
+    {url = mainPath.."assets/logo.nfp", path = "os/assets/logo.nfp"},
     {url = mainPath.."functions/displayNFP.lua", path = "os/functions/displayNFP.lua"},
     {url = mainPath.."monitor.lua", path = "os/monitor.lua"},
     {url = mainPath.."updater.lua", path = "os/updater.lua"},
