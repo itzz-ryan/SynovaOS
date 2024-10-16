@@ -29,22 +29,9 @@ print("Starting Mindows...")
 
 os.sleep(2)
 
--- Load the NFP file
-local function displayNFP(filename)
-    if fs.exists(filename) then
-        -- Clear the terminal
-        term.clear()
-        term.setCursorPos(1, 1)
+local displayNFP = require("os/functions/displayNFP")
 
-        -- Load and draw the NFP file
-        paintutils.drawImage(paintutils.loadImage(filename), 1, 1)
-    else
-        print("File not found: " .. filename)
-    end
-end
-
--- Display the loading image
-displayNFP("os/loading.nfp")
+displayNFP("os/assets/loading.nfp")
 
 os.sleep(2)
 
