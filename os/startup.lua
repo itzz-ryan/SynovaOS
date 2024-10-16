@@ -29,7 +29,7 @@ print("Starting Mindows...")
 
 os.sleep(2)
 
-local displayNFP = require("os/functions/displayNFP")
+local displayNFP = require("os.functions.displayNFP")
 
 displayNFP("os/assets/loading.nfp")
 
