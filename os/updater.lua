@@ -54,17 +54,9 @@ local function checkForUpdates()
     end
 
     -- Proceed with updating files
-    print("Getting Updater content from Pastebin...")
-
-    local content = shell.run("pastebin get vX7AD0wu")
-    
     print("Creating Updater file...")
 
-    local updaterFile = fs.open("update.lua", "w")
-
-    updaterFile.write(content)
-
-    updaterFile.close()
+    shell.run("pastebin get update vX7AD0wu")
 
     -- Update version file last
     local file = fs.open("currentVersion.txt", "w")
