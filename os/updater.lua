@@ -1,5 +1,6 @@
 -- URLs for the GitHub version file and files to update
 local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
+local updaterUrl = "https://pastebin.com/vX7AD0wu"
 
 -- Function to read the local version file
 local function getLocalVersion()
@@ -53,10 +54,17 @@ local function checkForUpdates()
     end
 
     -- Proceed with updating files
-    print("Updating files...")
-    for _, file in ipairs(filesToUpdate) do
-        downloadFile(file.url, file.path)
-    end
+    print("Getting Updater content from Pastebin...")
+
+    local content = shell.run("pastebin get vX7AD0wu")
+    
+    print("Creating Updater file...")
+
+    local updaterFile = fs.open("update.lua", "w")
+
+    file.write(content)
+
+    file.close()
 
     -- Update version file last
     local file = fs.open("currentVersion.txt", "w")
