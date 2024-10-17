@@ -12,13 +12,7 @@ term.setCursorPos(1, 1)
 
 print("Running Updater...")
 
-local success, err = pcall(function()
-    shell.run("os/updater.lua")
-end)
-
-if not success then
-    print("Error running updater: " .. err)
-end
+shell.run("os/updater.lua")
 
 os.sleep(1.5)
 
@@ -46,34 +40,8 @@ end
 term.clear()
 term.setCursorPos(1, 1)
 
-local success, err = pcall(function()
-    shell.run("os/loading.lua")
-end)
+shell.run("os/loading.lua")
 
-if not success then
-    print("Error running loading: " .. err)
-end
+shell.run("os/welcome.lua")
 
-term.clear()
-term.setCursorPos(1, 1)
-
-local success, err = pcall(function()
-    shell.run("os/welcome.lua")
-end)
-
-if not success then
-    print("Error running welcome: " .. err)
-end
-
-os.sleep(1)
-
-term.clear()
-term.setCursorPos(1, 1)
-
-local success, err = pcall(function()
-    shell.run("os/start.lua")
-end)
-
-if not success then
-    print("Error running starter: " .. err)
-end
+shell.run("os/start.lua")
