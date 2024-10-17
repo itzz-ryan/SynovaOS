@@ -26,6 +26,7 @@ local files = {
     {url = mainPath.."assets/logo.nfp", path = "os/assets/logo.nfp"},
     {url = mainPath.."functions/displayNFP.lua", path = "os/functions/displayNFP.lua"},
     {url = mainPath.."monitor.lua", path = "os/monitor.lua"},
+    {url = mainPath.."loadingScreen.lua", path = "os/loadingScreen.lua"},
     {url = mainPath.."updater.lua", path = "os/updater.lua"},
     {url = mainPath.."main.lua", path = "os/main.lua"},
     {url = mainPath.."startup.lua", path = "os/startup.lua"},
