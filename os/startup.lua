@@ -47,6 +47,19 @@ term.clear()
 term.setCursorPos(1, 1)
 
 local success, err = pcall(function()
+    shell.run("os/loadingScreen.lua")
+end)
+
+if not success then
+    print("Error running starter: " .. err)
+end
+
+term.clear()
+term.setCursorPos(1, 1)
+
+os.sleep(1)
+
+local success, err = pcall(function()
     shell.run("os/start.lua")
 end)
 
