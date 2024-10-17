@@ -54,10 +54,10 @@ if not success then
     print("Error running starter: " .. err)
 end
 
+os.sleep(10)
+
 term.clear()
 term.setCursorPos(1, 1)
-
-os.sleep(10)
 
 local success, err = pcall(function()
     shell.run("os/start.lua")
