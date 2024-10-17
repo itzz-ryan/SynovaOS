@@ -29,11 +29,13 @@ print("Starting Mindows...")
 
 os.sleep(2)
 
-local displayNFPModule = require("os/functions/displayNFP")
+local displayNFPModule = require("functions/displayNFP")
 
 displayNFPModule.displayNFP("os/assets/logo.nfp")
 
 os.sleep(2)
+
+
 
 term.clear()
 term.setCursorPos(1, 1)
