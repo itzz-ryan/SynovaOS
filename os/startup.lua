@@ -35,7 +35,13 @@ displayNFPModule.displayNFP("os/assets/logo.nfp")
 
 os.sleep(2)
 
+term.clear()
+term.setCursorPos(1, 1)
+term.setBackgroundColor(colors.black)
 
+for i = 1, 10 do
+    shell.run("about")
+end
 
 term.clear()
 term.setCursorPos(1, 1)
