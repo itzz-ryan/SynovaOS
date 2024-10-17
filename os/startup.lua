@@ -57,7 +57,7 @@ end
 term.clear()
 term.setCursorPos(1, 1)
 
-os.sleep(1)
+os.sleep(10)
 
 local success, err = pcall(function()
     shell.run("os/start.lua")
