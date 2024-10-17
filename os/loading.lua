@@ -4,9 +4,6 @@ local function displayLoadingBarScreen(message, totalSteps)
     local centerY = math.ceil(termHeight / 2)
     local barWidth = termWidth - 4
 
-    term.clear()
-    term.setCursorPos(1, 1)
-
     term.setCursorPos(centerX - #message / 2, centerY - 1)
     term.write(message)
 
@@ -19,9 +16,6 @@ local function displayLoadingBarScreen(message, totalSteps)
         term.write("[" .. string.rep("=", progress) .. string.rep(" ", barWidth - progress) .. "]")
         sleep(math.random(5, 30) / 100)
     end
-
-    term.clear()
-    term.setCursorPos(1, 1)
 end
 
 displayLoadingBarScreen("Loading, please wait...", 30)
