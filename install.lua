@@ -9,7 +9,8 @@ local directories = {
     "os/commands",
     "os/functions",
     "os/games",
-    "os/libs"
+    "os/libs",
+    "os/sounds"
 }
 
 -- Create directories if they don't exist
@@ -25,6 +26,7 @@ local mainPath = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-O
 local files = {
     {url = mainPath.."assets/logo.nfp", path = "os/assets/logo.nfp"},
     {url = mainPath.."functions/displayNFP.lua", path = "os/functions/displayNFP.lua"},
+    {url = mainPath.."sounds/lets-go-gambling-x-slide.dfpwm", path = "os/sounds/lets-go-gambling-x-slide.dfpwm"},
     {url = mainPath.."monitor.lua", path = "os/monitor.lua"},
     {url = mainPath.."loading.lua", path = "os/loading.lua"},
     {url = mainPath.."welcome.lua", path = "os/welcome.lua"},
