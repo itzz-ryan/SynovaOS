@@ -40,7 +40,11 @@ end
 term.clear()
 term.setCursorPos(1, 1)
 
+os.sleep(0.5)
+
 shell.run("os/loading.lua")
+
+os.sleep(0.5)
 
 term.clear()
 term.setCursorPos(1, 1)
