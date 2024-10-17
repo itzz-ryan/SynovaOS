@@ -2,9 +2,6 @@ local function displayStartAnimation()
     local termWidth, termHeight = term.getSize()
     local centerX = math.ceil(termWidth / 2)
     local centerY = math.ceil(termHeight / 2)
-    
-    term.clear()
-    term.setCursorPos(1, 1)
 
     local message = "Welcome!"
     local delay = 0.1
@@ -35,8 +32,6 @@ local function displayStartAnimation()
     end
 
     sleep(0.5)
-    term.clear()
-    term.setCursorPos(1, 1)
 end
 
 displayStartAnimation()
