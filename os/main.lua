@@ -34,10 +34,10 @@ local function displayMenu()
     print("5. Delete a File")
     print("6. Clear Screen")
     print("7. Shutdown")
-    print("8. Snake Game")
+    print("8. Install a Game")
     print("9. Play Sound")
     print("-------------------------")
-    print("Select an option (1-8): ")
+    print("Select an option (1-9): ")
 end
 
 local function viewFiles()
@@ -153,7 +153,7 @@ while true do
         print("Shutting down...")
         os.shutdown()
     elseif choice == "8" then
-        shell.run("os/games/snake.lua")
+        
     elseif choice == "9" then
         shell.run("speaker play os/sounds/lets-go-gambling-x-slide.dfpwm")
     else
