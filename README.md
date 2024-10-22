@@ -1,6 +1,6 @@
-# 🖥️ My Custom OS for ComputerCraft 🌟
+# 🖥️ Mindows for ComputerCraft 🌟
 
-Welcome to **My Custom OS**! This is a lightweight and user-friendly operating system designed specifically for the **ComputerCraft** mod in **Minecraft**. With features like file management and command execution, it's the perfect way to enhance your ComputerCraft experience!
+Welcome to **Mindows**! This is a lightweight and user-friendly operating system designed specifically for the **ComputerCraft** mod in **Minecraft**. With features like file management and command execution, it's the perfect way to enhance your ComputerCraft experience!
 
 ## 🚀 Features
 
@@ -61,4 +61,4 @@ For any questions or feedback, reach out to me on GitHub: [GamerboyRyan](https:/
 
 ---
 
-Enjoy using **My Custom OS**! 🎉
+Enjoy using **Mindows**! 🎉
