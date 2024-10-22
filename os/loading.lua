@@ -14,7 +14,7 @@ local function displayLoadingBarScreen(message, totalSteps)
         local progress = math.floor((step / totalSteps) * barWidth)
         term.setCursorPos(2, centerY)
         term.write("[" .. string.rep("=", progress) .. string.rep(" ", barWidth - progress) .. "]")
-        sleep(math.random(5, 30) / 100)
+        sleep(math.random(1, 10) / 100)
     end
 end
 
