@@ -1,4 +1,3 @@
--- startup.lua
 if fs.exists("install.lua") then
     shell.run("delete install.lua")
 end
