@@ -1,7 +1,5 @@
--- main.lua
 local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
 
--- Function to get the latest version from GitHub
 local function getRemoteVersion()
     local response = http.get(versionUrl)
   
@@ -20,13 +18,11 @@ end
 
 local currentVersion = getRemoteVersion()
 
--- Function to clear the terminal
 local function clearScreen()
     term.clear()
     term.setCursorPos(1, 1)
 end
 
--- Function to display the main menu
 local function displayMenu()
     clearScreen()
     print("Welcome to Mindows! Version: "..currentVersion)
@@ -44,7 +40,6 @@ local function displayMenu()
     print("Select an option (1-8): ")
 end
 
--- Function to view files in the current directory
 local function viewFiles()
     clearScreen()
     print("Files in current directory:")
@@ -53,10 +48,9 @@ local function viewFiles()
         print("- " .. file)
     end
     print("\nPress Enter to return...")
-    read()  -- Wait for user input
+    read()
 end
 
--- Function to edit a file
 local function editFile()
     clearScreen()
     print("Enter the name of the file to edit (or type 'exit' to return):")
@@ -68,11 +62,10 @@ local function editFile()
         shell.run("edit " .. fileName)
     else
         print("File does not exist! Press Enter to continue...")
-        read()  -- Wait for user input
+        read()
     end
 end
 
--- Function to run a command
 local function runCommand()
     clearScreen()
     print("Enter the command to run (or type 'exit' to return):")
@@ -85,12 +78,11 @@ local function runCommand()
         if not success then
             print("Error: " .. result)
             print("Press Enter to continue...")
-            read()  -- Wait for user input
+            read()
         end
     end
 end
 
--- Function to create a new file
 local function createFile()
     clearScreen()
     print("Enter the name of the new file (or type 'exit' to return):")
@@ -102,7 +94,7 @@ local function createFile()
         print("File already exists! Press Enter to continue...")
         read()
     else
-        local file = fs.open(fileName, "w")  -- Create a new file in write mode
+        local file = fs.open(fileName, "w")
         print("Enter content for the file (type 'EOF' on a new line to finish):")
         while true do
             local line = read()
@@ -117,7 +109,6 @@ local function createFile()
     end
 end
 
--- Function to delete a file
 local function deleteFile()
     clearScreen()
     print("Enter the name of the file to delete (or type 'exit' to return):")
@@ -135,14 +126,12 @@ local function deleteFile()
     end
 end
 
--- Function to clear the screen
 local function clearScreenOption()
     clearScreen()
     print("Screen cleared! Press Enter to return...")
     read()
 end
 
--- Main loop
 while true do
     displayMenu()
     
@@ -169,6 +158,6 @@ while true do
         shell.run("speaker play os/sounds/lets-go-gambling-x-slide.dfpwm")
     else
         print("Invalid choice! Please select again. Press Enter to continue...")
-        read()  -- Wait for user input
+        read()
     end
 end
