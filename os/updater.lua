@@ -1,8 +1,6 @@
--- URLs for the GitHub version file and files to update
 local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
 local updaterUrl = "https://pastebin.com/vX7AD0wu"
 
--- Function to read the local version file
 local function getLocalVersion()
     if fs.exists("currentVersion.txt") then
         local file = fs.open("currentVersion.txt", "r")
@@ -17,7 +15,6 @@ local function getLocalVersion()
     end
 end
 
--- Function to get the latest version from GitHub
 local function getRemoteVersion()
     local response = http.get(versionUrl)
   
@@ -34,7 +31,6 @@ local function getRemoteVersion()
     end
 end
 
--- Main update function
 local function checkForUpdates()
     print("Checking for updates...")
 
@@ -53,7 +49,6 @@ local function checkForUpdates()
         print("New version available: " .. remoteVersion .. " (Current: " .. localVersion .. ")")
     end
 
-    -- Proceed with updating files
     print("Creating Updater file...")
 
     shell.run("pastebin get vX7AD0wu update")
@@ -67,5 +62,4 @@ local function checkForUpdates()
     shell.run("update")
 end
 
--- Run the update check
 checkForUpdates()
