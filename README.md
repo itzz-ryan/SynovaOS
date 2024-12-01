@@ -1,6 +1,6 @@
-# 🖥️ Mindows for ComputerCraft 🌟
+# 🖥️ SynovaOS for ComputerCraft 🌟
 
-Welcome to **Mindows**! This is a lightweight and user-friendly operating system designed specifically for the **ComputerCraft** mod in **Minecraft**. With features like file management and command execution, it's the perfect way to enhance your ComputerCraft experience!
+Welcome to **SynovaOS**! This is a lightweight and user-friendly operating system designed specifically for the **ComputerCraft** mod in **Minecraft**. With features like file management and command execution, it's the perfect way to enhance your ComputerCraft experience!
 
 ## 🚀 Features
 
@@ -61,4 +61,4 @@ For any questions or feedback, reach out to me on GitHub: [GamerboyRyan](https:/
 
 ---
 
-Enjoy using **Mindows**! 🎉
+Enjoy using **SynovaOS**! 🎉
