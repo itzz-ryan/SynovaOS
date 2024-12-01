@@ -1,4 +1,6 @@
-local function displayLoadingBarScreen(message, totalSteps)
+local loadingBarScreenModule = {}
+
+function loadingBarScreenModule.displayLoadingBarScreen(message, totalSteps)
     local termWidth, termHeight = term.getSize() 
     local centerX = math.ceil(termWidth / 2)
     local centerY = math.ceil(termHeight / 2)
@@ -18,4 +20,4 @@ local function displayLoadingBarScreen(message, totalSteps)
     end
 end
 
-displayLoadingBarScreen("Loading, please wait...", 30)
+return loadingBarScreenModule

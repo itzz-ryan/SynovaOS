@@ -18,30 +18,23 @@ os.sleep(1.5)
 term.clear()
 term.setCursorPos(1, 1)
 
-print("Starting Mindows...")
+print("Starting SynovaOS...")
 
 os.sleep(2)
 
-local displayNFPModule = require("functions/displayNFP")
+local displayNFPModule = require("modules/displayNFP")
 
 displayNFPModule.displayNFP("os/assets/logo.nfp")
 
 os.sleep(2)
 
-term.clear()
-term.setCursorPos(1, 1)
-term.setBackgroundColor(colors.black)
-
-for i = 1, 10 do
-    shell.run("about")
-end
-
-term.clear()
-term.setCursorPos(1, 1)
+displayNFPModule.clearScreen()
 
 os.sleep(0.5)
 
-shell.run("os/loading.lua")
+local loadingBarScreenModule = require("modules/loadingBarScreen")
+
+loadingBarScreenModule.displayLoadingBarScreen("Loading, please wait...", 10)
 
 os.sleep(0.5)
 

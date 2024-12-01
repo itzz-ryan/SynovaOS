@@ -1,4 +1,4 @@
-local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
+local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/SynovaOS/main/version.txt"
 local updaterUrl = "https://pastebin.com/vX7AD0wu"
 
 local function getLocalVersion()

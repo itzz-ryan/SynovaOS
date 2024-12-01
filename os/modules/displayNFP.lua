@@ -11,4 +11,17 @@ function displayNFPModule.displayNFP(filePath)
     end
 end
 
+function displayNFPModule.clearScreen()
+    term.clear()
+    term.setCursorPos(1, 1)
+    term.setBackgroundColor(colors.black)
+    
+    for i = 1, 10 do
+        shell.run("about")
+    end
+    
+    term.clear()
+    term.setCursorPos(1, 1)
+end
+
 return displayNFPModule

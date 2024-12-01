@@ -5,7 +5,7 @@ local directories = {
     "os",
     "os/assets",
     "os/commands",
-    "os/functions",
+    "os/modules",
     "os/games",
     "os/libs",
     "os/sounds"
@@ -21,7 +21,8 @@ local mainPath = "https://raw.githubusercontent.com/GamerboyRyan/SynovaOS/main/o
 
 local files = {
     {url = mainPath.."assets/logo.nfp", path = "os/assets/logo.nfp"},
-    {url = mainPath.."functions/displayNFP.lua", path = "os/functions/displayNFP.lua"},
+    {url = mainPath.."modules/displayNFP.lua", path = "os/modules/displayNFP.lua"},
+    {url = mainPath.."modules/loadingBarScreen.lua", path = "os/modules/loadingBarScreen.lua"},
     {url = mainPath.."sounds/lets-go-gambling-x-slide.dfpwm", path = "os/sounds/lets-go-gambling-x-slide.dfpwm"},
     {url = mainPath.."monitor.lua", path = "os/monitor.lua"},
     {url = mainPath.."loading.lua", path = "os/loading.lua"},
@@ -57,7 +58,7 @@ startup.close()
 
 local currentVersion
 
-local url = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/version.txt"
+local url = "https://raw.githubusercontent.com/GamerboyRyan/SynovaOS/main/version.txt"
 
 local response = http.get(url)
 
@@ -72,6 +73,7 @@ else
 end
 
 local currentVersionFile = fs.open("currentVersion.txt", "w")
+
 if currentVersionFile then
     currentVersionFile.write(currentVersion)
     
