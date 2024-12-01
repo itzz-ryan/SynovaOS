@@ -17,7 +17,7 @@ for _, dir in ipairs(directories) do
     end
 end
 
-local mainPath = "https://raw.githubusercontent.com/GamerboyRyan/ComputerCraft-OS/main/os/"
+local mainPath = "https://raw.githubusercontent.com/GamerboyRyan/SynovaOS/main/os/"
 
 local files = {
     {url = mainPath.."assets/logo.nfp", path = "os/assets/logo.nfp"},
