@@ -1,7 +1,7 @@
 term.clear()
 term.setCursorPos(1, 1)
 
-print("Welcome to Mindows!")
+print("Welcome to SynovaOS!")
 print("1. Start OS")
 print("2. Shell Mode")
 print("3. Shutdown")
