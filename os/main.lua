@@ -25,7 +25,7 @@ end
 
 local function displayMenu()
     clearScreen()
-    print("Welcome to Mindows! Version: "..currentVersion)
+    print("Welcome to SynovaOS! Version: "..currentVersion)
     print("-------------------------")
     print("1. View Files")
     print("2. Edit a File")
