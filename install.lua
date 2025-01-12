@@ -60,6 +60,10 @@ local files = {
     {url = mainPath.."libs/helper.lua", path = "os/libs/helper.lua"}
 }
 
+local function getFileNameFromPath(path)
+    return path:match("([^/]+)$")
+end
+
 local function downloadFile(url, path)
     shell.run("wget " .. url .. " " .. path)
 end
@@ -72,9 +76,10 @@ local function downloadWithProgressBar()
     for i, file in ipairs(files) do
         local progress = i / totalFiles
         drawProgressBarCentered(barLength, progress)
-        writeCentered("Downloading " .. file.path .. "...", 2)
+        local fileName = getFileNameFromPath(file.path)
+        writeCentered("Downloading: " .. fileName, 2)
         downloadFile(file.url, file.path)
-        os.sleep(0.5) -- Adds a slight delay for visual feedback (optional)
+        os.sleep(0.5) -- Optional delay for visual feedback
     end
 
     -- Complete bar and clear extra info
