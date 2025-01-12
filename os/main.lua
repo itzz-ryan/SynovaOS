@@ -1,12 +1,10 @@
-local versionUrl = "https://raw.githubusercontent.com/GamerboyRyan/SynovaOS/main/version.txt"
-
-local function getRemoteVersion()
-    local response = http.get(versionUrl)
-  
-    if response then
-        local version = response.readLine()
+local function getLocalVersion()
+    if fs.exists("currentVersion.txt") then
+        local file = fs.open("currentVersion.txt", "r")
     
-        response.close()
+        local version = file.readLine()
+    
+        file.close()
     
         return version
     else
@@ -16,7 +14,7 @@ local function getRemoteVersion()
     end
 end
 
-local currentVersion = getRemoteVersion()
+local currentVersion = getLocalVersion()
 
 local function clearScreen()
     term.clear()
