@@ -1,6 +1,15 @@
 term.clear()
 term.setCursorPos(1, 1)
 
+local function drawProgressBar(x, y, length, progress)
+    term.setCursorPos(x, y)
+    term.write("[")
+    local barLength = math.floor(length * progress)
+    term.write(string.rep("=", barLength))
+    term.write(string.rep(" ", length - barLength))
+    term.write("]")
+end
+
 local directories = {
     "os",
     "os/assets",
@@ -41,16 +50,29 @@ local function downloadFile(url, path)
     shell.run("wget " .. url .. " " .. path)
 end
 
-print("Starting installation...")
-print("")
-print("===================================")
+local function downloadWithProgressBar()
+    print("Starting installation...")
+    print("")
+    print("===================================")
+    os.sleep(1)
 
-os.sleep(1)
+    local totalFiles = #files
+    for i, file in ipairs(files) do
+        local progress = i / totalFiles
+        drawProgressBar(1, 7, 30, progress)
+        print("Downloading " .. file.path .. "...")
+        downloadFile(file.url, file.path)
+        term.clearLine()
+        term.setCursorPos(1, 8)
+    end
 
-for _, file in ipairs(files) do
-    print("Downloading " .. file.path .. "...")
-    downloadFile(file.url, file.path)
+    term.clearLine()
+    term.setCursorPos(1, 8)
+    drawProgressBar(1, 7, 30, 1)
+    print("Installation progress complete!")
 end
+
+downloadWithProgressBar()
 
 local startup = fs.open("startup", "w")
 startup.writeLine("shell.run('os/startup.lua')")
@@ -64,9 +86,7 @@ local response = http.get(url)
 
 if response then
     local content = response.readAll()
-    
     response.close()
-
     currentVersion = content
 else
     print("Failed to fetch version.txt from GitHub. Make sure HTTP is enabled.")
@@ -76,7 +96,6 @@ local currentVersionFile = fs.open("currentVersion.txt", "w")
 
 if currentVersionFile then
     currentVersionFile.write(currentVersion)
-    
     currentVersionFile.close()
 else
     print("Failed to open the file for writing.")
