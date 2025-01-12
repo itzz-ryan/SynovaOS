@@ -1,13 +1,27 @@
 term.clear()
-term.setCursorPos(1, 1)
 
-local function drawProgressBar(x, y, length, progress)
-    term.setCursorPos(x, y)
+-- Centering helpers
+local function getCenter()
+    local w, h = term.getSize()
+    return math.floor(w / 2), math.floor(h / 2)
+end
+
+local function drawProgressBarCentered(length, progress)
+    local centerX, centerY = getCenter()
+    local startX = centerX - math.floor(length / 2)
+    term.setCursorPos(startX, centerY)
     term.write("[")
     local barLength = math.floor(length * progress)
     term.write(string.rep("=", barLength))
     term.write(string.rep(" ", length - barLength))
     term.write("]")
+end
+
+local function writeCentered(text, offsetY)
+    local centerX, centerY = getCenter()
+    local x = centerX - math.floor(#text / 2)
+    term.setCursorPos(x, centerY + offsetY)
+    term.write(text)
 end
 
 local directories = {
@@ -51,25 +65,21 @@ local function downloadFile(url, path)
 end
 
 local function downloadWithProgressBar()
-    print("Starting installation...")
-    print("")
-    print("===================================")
-    os.sleep(1)
-
+    local barLength = 30
     local totalFiles = #files
+    writeCentered("Installing...", -2)
+
     for i, file in ipairs(files) do
         local progress = i / totalFiles
-        drawProgressBar(1, 7, 30, progress)
-        print("Downloading " .. file.path .. "...")
+        drawProgressBarCentered(barLength, progress)
+        writeCentered("Downloading " .. file.path .. "...", 2)
         downloadFile(file.url, file.path)
-        term.clearLine()
-        term.setCursorPos(1, 8)
+        os.sleep(0.5) -- Adds a slight delay for visual feedback (optional)
     end
 
-    term.clearLine()
-    term.setCursorPos(1, 8)
-    drawProgressBar(1, 7, 30, 1)
-    print("Installation progress complete!")
+    -- Complete bar and clear extra info
+    drawProgressBarCentered(barLength, 1)
+    writeCentered("Installation progress complete!", 4)
 end
 
 downloadWithProgressBar()
@@ -89,7 +99,7 @@ if response then
     response.close()
     currentVersion = content
 else
-    print("Failed to fetch version.txt from GitHub. Make sure HTTP is enabled.")
+    writeCentered("Failed to fetch version.txt from GitHub. Make sure HTTP is enabled.", 6)
 end
 
 local currentVersionFile = fs.open("currentVersion.txt", "w")
@@ -98,13 +108,10 @@ if currentVersionFile then
     currentVersionFile.write(currentVersion)
     currentVersionFile.close()
 else
-    print("Failed to open the file for writing.")
+    writeCentered("Failed to open the file for writing.", 7)
 end
 
-print("===================================")
-print("")
-print("Installation complete! Rebooting...")
+writeCentered("Installation complete! Rebooting...", 8)
 
 os.sleep(1)
-
 os.reboot()
