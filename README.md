@@ -1,3 +1,7 @@
+# Currently broken, and I'm too lazy to fix. Feel free to open a pull request and fix it for me.
+
+---
+
 # 🖥️ SynovaOS for ComputerCraft 🌟
 
 Welcome to **SynovaOS**! This is a lightweight and user-friendly operating system designed specifically for the **ComputerCraft** mod in **Minecraft**. With features like file management and command execution, it's the perfect way to enhance your ComputerCraft experience!
